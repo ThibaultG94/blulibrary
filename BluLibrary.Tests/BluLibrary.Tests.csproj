@@ -20,4 +20,10 @@
     <Using Include="Xunit" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BluLibrary.Core\BluLibrary.Core.csproj" />
+    <ProjectReference Include="..\BluLibrary.Infrastructure\BluLibrary.Infrastructure.csproj" />
+    <ProjectReference Include="..\BluLibrary.Api\BluLibrary.Api.csproj" />
+  </ItemGroup>
+
 </Project>
