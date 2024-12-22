@@ -23,14 +23,14 @@ public sealed class Bluray : BaseEntity
     private Bluray(
         string title,
         string director,
-        string isbn,
+        ISBN isbn,
         int releaseYear,
         BlurayGenre genre,
         int durationMinutes)
     {
         SetTitle(title);
         SetDirector(director);
-        SetISBN(isbn);
+        ISBN = isbn;
         SetReleaseYear(releaseYear);
         SetGenre(genre);
         SetDuration(durationMinutes);
@@ -45,7 +45,7 @@ public sealed class Bluray : BaseEntity
         BlurayGenre genre,
         int durationMinutes)
     {
-        return new Bluray(title, director, isbn, releaseYear, genre, durationMinutes);
+        return new Bluray(title, director, ISBN.Create(isbn), releaseYear, genre, durationMinutes);
     }
 
     public void Update(
